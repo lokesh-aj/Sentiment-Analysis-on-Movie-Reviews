@@ -1,20 +1,23 @@
 # Sentiment Analysis on Movie Reviews
 
 ## Overview
-This project aims to develop a machine learning model that classifies movie reviews as positive or negative based on sentiment. It involves data collection, text preprocessing, model training, evaluation, and deployment to provide insights into audience sentiment.
+This project uses a machine learning model to classify movie reviews as positive or negative using the "IMDB Dataset of 50k Movie Reviews" from Kaggle.
+
+## Dataset
+The dataset used in this project can be found here:  
+[IMDB Dataset of 50k Movie Reviews](https://www.kaggle.com/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews)
 
 ## Features
-- **Data Collection**: Gather movie reviews from sources like IMDb and Rotten Tomatoes.
-- **Text Preprocessing**: Remove noise, normalize text, and prepare data.
-- **Model Training**: Train models such as Logistic Regression and Support Vector Machines (SVM).
-- **Evaluation**: Use accuracy and F1-score to assess model performance.
-- **Deployment**: Provide insights for filmmakers and studios.
+- **Text Preprocessing**: Tokenization, stopword removal, punctuation removal.
+- **Vectorization**: Transformation using CountVectorizer and TfidfVectorizer.
+- **Model Training**: Logistic Regression, Support Vector Machines (SVM), and Random Forest.
+- **Evaluation**: Accuracy, confusion matrix, and classification report.
 
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/sentiment-analysis.git
-   cd sentiment-analysis
+   git clone https://github.com/lokesh-aj/Sentiment-Analysis-on-Movie-Reviews.git
+   cd Sentiment-Analysis-on-Movie-Reviews
    ```
 2. Install dependencies:
    ```bash
@@ -22,26 +25,23 @@ This project aims to develop a machine learning model that classifies movie revi
    ```
 
 ## Usage
-1. Prepare the dataset by collecting and preprocessing text reviews.
-2. Train the model using `train.py`.
+1. Open the Jupyter Notebook:
    ```bash
-   python train.py
+   jupyter notebook Model.ipynb
    ```
-3. Evaluate the model:
-   ```bash
-   python evaluate.py
-   ```
-4. Use the model for sentiment classification:
-   ```bash
-   python predict.py "This movie was amazing!"
+2. Run all the cells to train and evaluate the model.
+3. Test the model with a sample review:
+   ```python
+   pre = LRmodel.predict(["This movie was fantastic!"])
+   print(pre)
    ```
 
 ## Technologies Used
 - Python
 - Scikit-learn
+- Spacy
 - Pandas & NumPy
-- NLTK
-- Flask (for deployment)
+- Matplotlib
 
 ## Contributing
 Contributions are welcome! Fork the repository and submit a pull request with improvements.
